@@ -1,0 +1,42 @@
+{% extends 'layout_en.html' %}
+
+{% block title %} Main Screen {% endblock%}
+
+{% block content %}
+
+<div id="identified_inicio">
+    <h1>Diagnosis of the 8 Structural Pillars</h1>
+</div>
+
+<div class="content_text">
+    <p class="p1"> The diagnosis of the 8 Structural Pillars corresponds to a methodology of the consultant
+         Andrés Silva Arancibia, to carry out an organizational analysis regarding how companies
+         are prepared and appropriate to achieve business digital leadership in industries.
+    </p>
+</div>
+
+<table class="table2">
+<tr class="tr2">
+    <td class="td2">
+    <div class="columna">
+        {% load static %}
+        <img src="{% static 'images/8-pilares_en.png' %}" width="500"/>
+    </div>
+    </td>
+
+    <td class="td2">
+    <div class="columna1">
+        <p><b> PEOPLE: </b> Commitment to happiness and integral development of workers.</p><br>
+        <p><b> CULTURE: </b> Commitment to spaces for the development of creativity and customer-oriented innovation.</p><br>
+        <p><b> LEADERSHIP: </b> Commitment to the integral development of the organization at all levels.</p><br>
+        <p><b> STRATEGY: </b> Commitment to developing excellence in the customer experience.</p><br>
+        <p><b> STRUCTURE: </b> Commitment to the ability to systematically adapt to change.</p><br>
+        <p><b> OPERATIONS AND PROCESSES: </b> Commitment to compliance in time, quality and cost for the client.</p><br>
+        <p><b> CREATIVITY AND INNOVATION: </b> Commitment to creating value for the customer.</p><br>
+        <p><b> TECHNOLOGY: </b> Commitment to continuous improvement and innovation to add significant value to the customer.</p>
+    </div>
+    </td>
+</tr>
+</table>
+
+{% endblock%}

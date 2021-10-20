@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+            <!-- Título de cada página -->
+        {% endblock %}
+        | Carlos Del Castillo    
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/button.css' %}" />
+
+    <!-- <script src="{% static 'js/app.js' %}" type="text/javascript"/></script> -->
+
+</head>
+
+<body>
+    <!-- Cabecera de la página -->
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logo-muninatales.png' %}"/>
+
+            <h1>Organizational Diagnosis | Municipal Management</h1>
+        </div>
+    </header>
+
+    <hr/>
+
+    <nav>    
+        <ul>
+            <li>
+                <a href="/home">Home</a> 
+            </li>
+            <li>
+                <a href="/diagnosis">Diagnosis of the 8 Pillars</a> 
+            </li>                
+            <li>
+                <a href="/resumen">Diagnosis Summary</a> 
+            </li>                        
+        </ul>
+    </nav>
+
+    <div class="check" align="center">
+        <span class="es">Español</span>
+        <input type="checkbox" class="btcheck" name="btcheck" checked/>
+        <span class="en">English</span>
+    </div>
+
+    <hr/>
+
+    <div id="content">
+
+        <div class="box">
+           <!-- <h2 class="title">Título de Prueba</h2>  -->
+            {% block content %}
+                <!-- Código que viene de templates -->
+                <strong>Código del bloque original!!</strong>
+            {% endblock %}
+        </div>
+
+    </div>
+    
+    <hr/>
+    <footer>
+        Master en Django &copy; Carlos Del Castillo - {% now "d/m/Y H:m:s" %}
+    </footer>
+
+    <script src="{% static 'js/app.js' %}" type="text/javascript"/></script>
+
+
+</body>
+
+</html>
